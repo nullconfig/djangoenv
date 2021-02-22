@@ -1,8 +1,8 @@
+import datetime
 from django.test import TestCase
 from blogging.models import Post 
 from blogging.models import Category
 from django.contrib.auth.models import User
-import datetime
 from django.utils.timezone import utc
 
 class FrontEndTestCase(TestCase):
@@ -22,6 +22,7 @@ class FrontEndTestCase(TestCase):
                 pubdate = self.now - self.timedelta * count
                 post.published_date = pubdate
             post.save()
+
     def test_list_only_published(self):
         resp = self.client.get('/')
         # the content of the rendered response is always a bytestring
