@@ -1,2 +1,1 @@
-# Lesson 6
-blogging and polling
+# blogging and polling
